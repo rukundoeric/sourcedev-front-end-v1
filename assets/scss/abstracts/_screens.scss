@@ -9,6 +9,6 @@ $xs_mobile: "(max-width: 420px)";
 
 $all_big_screen: ($extra_big_screen, $big_screen, $medium_device);
 $all_medium_screen: ($medium_device, $tab_device);
-$only-small-screen: ($large_mobile, $small_mobile);
+$only_small_screen: ($large_mobile, $small_mobile);
 $all_small_screen: ($large_mobile, $small_mobile, $sm_mobile, $xs_mobile);
 $all_extra-small_screen: ($sm_mobile, $xs_mobile);

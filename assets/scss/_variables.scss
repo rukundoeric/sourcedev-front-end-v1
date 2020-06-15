@@ -4,7 +4,6 @@
 @import './abstracts/keyframes';
 @import './abstracts/extends';
 @import './abstracts/animations';
-
 // Background imgs
 $banner-bg-1: url(../imgs/bg/banner-bg-1.jpg);
 $banner-bg-2: url(../imgs/bg/banner-bg-2.jpg);
@@ -14,3 +13,8 @@ $banner-bg-gr: url(../imgs/bg/banner-bg-gr.png);
 //Icons
 $d-icon-menu: url(../imgs/icons/menu-open-d.svg);
 $d-icon-close: url(../imgs/icons/menu-close-d.svg);
+
+//Fonts
+$valken: url(../fonts/Valken__.ttf);
+$dosis:url(../fonts/Dosis-SemiBold.ttf);
+$helvetica:url(../fonts/Helvetica.ttf);

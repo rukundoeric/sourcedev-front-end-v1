@@ -1,3 +1,73 @@
+@keyframes jumping1 {
+  0% {
+    transform: translateY(0px) translateX(0) rotate(0) scale(1);
+    opacity: 0.8; }
+  25% {
+    transform: translateY(-10px) translateX(-10px) rotate(20deg) scale(0.8);
+    opacity: 0.9; }
+  50% {
+    transform: translateY(-15px) translateX(-15px) rotate(10deg) scale(0.9);
+    opacity: 0.8; }
+  75% {
+    transform: translateY(-20px) translateX(-20px) rotate(20deg) scale(0.75);
+    opacity: 0.6; }
+  85% {
+    transform: translateY(-25px) translateX(-25px) rotate(20deg) scale(0.9);
+    opacity: 0.7; }
+  100% {
+    transform: translateY(-15px) translateX(-15px) rotate(0) scale(0.95);
+    opacity: 0.85; } }
+@keyframes jumping2 {
+  0% {
+    transform: translateY(0px) translateX(0) rotate(0) scale(1);
+    opacity: .5; }
+  25% {
+    transform: translateY(-30px) translateX(10px) rotate(20deg) scale(0.8);
+    opacity: .8; }
+  50% {
+    transform: translateY(15px) translateX(-15px) rotate(10deg) scale(0.7);
+    opacity: .8; }
+  75% {
+    transform: translateY(30px) translateX(20px) rotate(20deg) scale(0.75);
+    opacity: .7; }
+  100% {
+    transform: translateY(-15px) translateX(15px) rotate(0) scale(0.75);
+    opacity: .9; } }
+@keyframes jumping3 {
+  0% {
+    transform: translateY(10px) translateX(0) rotate(0) scale(1);
+    opacity: .9; }
+  20% {
+    transform: translateY(20px) translateX(10px) rotate(-20deg) scale(0.8);
+    opacity: .8; }
+  40% {
+    transform: translateY(15px) translateX(-15px) rotate(10deg) scale(0.75);
+    opacity: .8; }
+  40% {
+    transform: translateY(-15px) translateX(-25px) rotate(10deg) scale(0.5);
+    opacity: 1; }
+  80% {
+    transform: translateY(-30px) translateX(20px) rotate(-20deg) scale(0.75);
+    opacity: .6; }
+  100% {
+    transform: translateY(15px) translateX(15px) rotate(0) scale(0.95);
+    opacity: .7; } }
+@keyframes jumping4 {
+  0% {
+    transform: translateY(-30px) translateX(20px) rotate(0) scale(1.2);
+    opacity: .7; }
+  25% {
+    transform: translateY(-20px) translateX(10px) rotate(50deg) scale(0.6);
+    opacity: .8; }
+  50% {
+    transform: translateY(15px) translateX(-15px) rotate(20deg) scale(0.5);
+    opacity: .9; }
+  75% {
+    transform: translateY(30px) translateX(20px) rotate(50deg) scale(0.75);
+    opacity: .7; }
+  100% {
+    transform: translateY(-15px) translateX(15px) rotate(0) scale(0.5);
+    opacity: .9; } }
 .banner .banner-content {
   background-image: -webkit-linear-gradient(90deg, #021422, #021422ee, #021e2ea7);
   background-image: -o-linear-gradient(90deg, #021422, #021422ee, #021e2ea7);
@@ -5,10 +75,69 @@
   background-repeat: no-repeat;
   background-size: 100% 100vh; }
 
+.jump-animimation-1 {
+  backface-visibility: hidden;
+  animation: jumping1 9s ease-in-out 2s infinite alternate;
+  -o-animation: jumping1 9s ease-in-out 2s infinite alternate;
+  -webkit-animation: jumping1 9s ease-in-out 2s infinite alternate;
+  -moz-transition: jumping1 9s ease-in-out 2s infinite alternate;
+  transition: all 8s ease 4s;
+  -moz-transition: all 8s ease 4s;
+  -webkit-transition: all 8s ease 4s;
+  -o-transition: all 8s ease 4s;
+  user-select: none; }
+
+.jump-animimation-2 {
+  backface-visibility: hidden;
+  animation: jumping2 9s ease-in-out 2s infinite alternate;
+  -o-animation: jumping2 9s ease-in-out 2s infinite alternate;
+  -webkit-animation: jumping2 9s ease-in-out 2s infinite alternate;
+  -moz-transition: jumping2 9s ease-in-out 2s infinite alternate;
+  transition: all 8s ease 4s;
+  -moz-transition: all 8s ease 4s;
+  -webkit-transition: all 8s ease 4s;
+  -o-transition: all 8s ease 4s;
+  user-select: none; }
+
+.jump-animimation-3 {
+  backface-visibility: hidden;
+  animation: jumping3 9s ease-in-out 2s infinite alternate;
+  -o-animation: jumping3 9s ease-in-out 2s infinite alternate;
+  -webkit-animation: jumping3 9s ease-in-out 2s infinite alternate;
+  -moz-transition: jumping3 9s ease-in-out 2s infinite alternate;
+  transition: all 8s ease 4s;
+  -moz-transition: all 8s ease 4s;
+  -webkit-transition: all 8s ease 4s;
+  -o-transition: all 8s ease 4s;
+  user-select: none; }
+
+.jump-animimation-4 {
+  backface-visibility: hidden;
+  animation: jumping4 9s ease-in-out 2s infinite alternate;
+  -o-animation: jumping4 9s ease-in-out 2s infinite alternate;
+  -webkit-animation: jumping4 9s ease-in-out 2s infinite alternate;
+  -moz-transition: jumping4 9s ease-in-out 2s infinite alternate;
+  transition: all 8s ease 4s;
+  -moz-transition: all 8s ease 4s;
+  -webkit-transition: all 8s ease 4s;
+  -o-transition: all 8s ease 4s;
+  user-select: none; }
+
+@font-face {
+  font-family: 'valken';
+  src: url(../fonts/Valken__.ttf); }
+@font-face {
+  font-family: 'dosis';
+  src: url(../fonts/Dosis-SemiBold.ttf); }
+@font-face {
+  font-family: 'helvetica';
+  src: url(../fonts/Helvetica.ttf); }
 .btn-1 {
   display: inline-block;
   padding: 10px 20px;
   border-radius: 50px;
+  font-weight: 10 !important;
+  font-family: valken, dosis !important;
   background-color: #ff931e;
   font-size: 10px;
   color: #FFFF !important;
@@ -205,6 +334,7 @@ ul {
       color: #ffffff8e;
       font-weight: 700;
       opacity: 1;
+      font-family: dosis, helvetica;
       text-decoration: none;
       cursor: pointer;
       -o-transition: all 0.3s ease-in-out;
@@ -220,7 +350,7 @@ ul {
   display: flex;
   height: 100vh;
   width: 100%;
-  background-color: #021e2ea7;
+  background-color: #021422;
   clip-path: circle(0 at 100% 0%);
   -o-transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
@@ -272,5 +402,157 @@ ul {
     height: 100vh;
     position: relative;
     overflow: hidden; }
+    @media only screen and (min-width: 421px) and (max-width: 575px) {
+      .banner .banner-content {
+        padding: 0 20px 0 20px; } }
+    @media (max-width: 420px) {
+      .banner .banner-content {
+        padding: 0 20px 0 20px; } }
+    .banner .banner-content .banner-text {
+      display: table;
+      width: 100%;
+      height: 100%; }
+      .banner .banner-content .banner-text .banner-text-iner {
+        display: block;
+        margin-top: 250px; }
+        @media only screen and (min-width: 992px) and (max-width: 1200px) {
+          .banner .banner-content .banner-text .banner-text-iner {
+            margin-top: 200px; } }
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+          .banner .banner-content .banner-text .banner-text-iner {
+            margin-top: 200px; } }
+        @media only screen and (min-width: 576px) and (max-width: 767px) {
+          .banner .banner-content .banner-text .banner-text-iner {
+            margin-top: 200px; } }
+        @media (max-width: 576px) {
+          .banner .banner-content .banner-text .banner-text-iner {
+            margin-top: 200px; } }
+        @media only screen and (min-width: 421px) and (max-width: 575px) {
+          .banner .banner-content .banner-text .banner-text-iner {
+            margin-top: 160px; } }
+        @media (max-width: 420px) {
+          .banner .banner-content .banner-text .banner-text-iner {
+            margin-top: 160px; } }
+        .banner .banner-content .banner-text .banner-text-iner h3 {
+          font-size: 25px;
+          color: #ffffff8e;
+          font-family: Arial, Helvetica, sans-serif;
+          display: flex; }
+          .banner .banner-content .banner-text .banner-text-iner h3 strong {
+            font-size: 25px;
+            display: flex;
+            font-family: valken !important;
+            font-weight: 10;
+            color: #ff931e; }
+            @media only screen and (min-width: 421px) and (max-width: 575px) {
+              .banner .banner-content .banner-text .banner-text-iner h3 strong {
+                font-size: 18px; } }
+            @media (max-width: 420px) {
+              .banner .banner-content .banner-text .banner-text-iner h3 strong {
+                font-size: 18px; } }
+            @media only screen and (min-width: 992px) and (max-width: 1200px) {
+              .banner .banner-content .banner-text .banner-text-iner h3 strong {
+                font-size: 25px; } }
+            @media only screen and (min-width: 768px) and (max-width: 991px) {
+              .banner .banner-content .banner-text .banner-text-iner h3 strong {
+                font-size: 25px; } }
+            @media only screen and (min-width: 576px) and (max-width: 767px) {
+              .banner .banner-content .banner-text .banner-text-iner h3 strong {
+                font-size: 22px; } }
+            @media (max-width: 576px) {
+              .banner .banner-content .banner-text .banner-text-iner h3 strong {
+                font-size: 22px; } }
+            .banner .banner-content .banner-text .banner-text-iner h3 strong::before {
+              content: "</";
+              display: flex;
+              margin-left: 5px;
+              font-family: valken !important; }
+            .banner .banner-content .banner-text .banner-text-iner h3 strong::after {
+              content: "/>";
+              display: flex;
+              margin-left: 5px;
+              font-family: valken !important; }
+          @media only screen and (min-width: 992px) and (max-width: 1200px) {
+            .banner .banner-content .banner-text .banner-text-iner h3 {
+              font-size: 25px; } }
+          @media only screen and (min-width: 768px) and (max-width: 991px) {
+            .banner .banner-content .banner-text .banner-text-iner h3 {
+              font-size: 25px; } }
+          @media only screen and (min-width: 576px) and (max-width: 767px) {
+            .banner .banner-content .banner-text .banner-text-iner h3 {
+              font-size: 22px; } }
+          @media (max-width: 576px) {
+            .banner .banner-content .banner-text .banner-text-iner h3 {
+              font-size: 22px; } }
+          @media only screen and (min-width: 421px) and (max-width: 575px) {
+            .banner .banner-content .banner-text .banner-text-iner h3 {
+              font-size: 18px; } }
+          @media (max-width: 420px) {
+            .banner .banner-content .banner-text .banner-text-iner h3 {
+              font-size: 18px; } }
+        .banner .banner-content .banner-text .banner-text-iner h1 {
+          font-size: 85px;
+          font-family: dosis;
+          margin-top: 30px;
+          min-width: 50%;
+          color: #ffffff8e; }
+          @media only screen and (min-width: 992px) and (max-width: 1200px) {
+            .banner .banner-content .banner-text .banner-text-iner h1 {
+              font-size: 60px; } }
+          @media only screen and (min-width: 768px) and (max-width: 991px) {
+            .banner .banner-content .banner-text .banner-text-iner h1 {
+              font-size: 60px; } }
+          @media only screen and (min-width: 576px) and (max-width: 767px) {
+            .banner .banner-content .banner-text .banner-text-iner h1 {
+              font-size: 55px; } }
+          @media (max-width: 576px) {
+            .banner .banner-content .banner-text .banner-text-iner h1 {
+              font-size: 55px; } }
+          @media only screen and (min-width: 421px) and (max-width: 575px) {
+            .banner .banner-content .banner-text .banner-text-iner h1 {
+              font-size: 45px; } }
+          @media (max-width: 420px) {
+            .banner .banner-content .banner-text .banner-text-iner h1 {
+              font-size: 45px; } }
+        .banner .banner-content .banner-text .banner-text-iner a {
+          margin-top: 70px;
+          font-size: 25px;
+          text-decoration: none !important; }
+          @media only screen and (min-width: 992px) and (max-width: 1200px) {
+            .banner .banner-content .banner-text .banner-text-iner a {
+              font-size: 20px; } }
+          @media only screen and (min-width: 768px) and (max-width: 991px) {
+            .banner .banner-content .banner-text .banner-text-iner a {
+              font-size: 20px; } }
+          @media only screen and (min-width: 576px) and (max-width: 767px) {
+            .banner .banner-content .banner-text .banner-text-iner a {
+              font-size: 18px; } }
+          @media (max-width: 576px) {
+            .banner .banner-content .banner-text .banner-text-iner a {
+              font-size: 18px; } }
+  .banner .anim-1 {
+    position: absolute;
+    left: 85%;
+    top: 1%;
+    width: 200px;
+    height: 200px; }
+  .banner .anim-2 {
+    position: absolute;
+    left: 2%;
+    top: 5%;
+    width: 200px;
+    height: 200px; }
+  .banner .anim-3 {
+    position: absolute;
+    left: 75%;
+    top: 13%;
+    width: 150px;
+    height: 150px; }
+  .banner .anim-4 {
+    position: absolute;
+    left: 0%;
+    top: 23%;
+    width: 150px;
+    height: 150px; }
 
 /*# sourceMappingURL=style.css.map */
