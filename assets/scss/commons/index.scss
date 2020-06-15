@@ -1,0 +1,106 @@
+@import "./button";
+
+body,
+html {
+  margin: -1px 0 0 0;
+  padding: 0px;
+}
+input,
+button,
+textarea {
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+ul {
+  padding-inline-start: 0px !important;
+  margin-block-start: 0px !important;
+  margin-block-end: 0px !important;
+}
+.d-icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-size: cover;
+  @include ease-transition(all, 0.4s, ease-in-out);
+  &:hover {
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg)
+      brightness(104%) contrast(97%);
+    transform: scale(1.4);
+  }
+}
+.nav-icon {
+  width: 21px;
+  cursor: pointer;
+  &::after,
+  &::before,
+  .in-d {
+    background-color: $color-white-1;
+    border-radius: 10px;
+    content: "";
+    display: block;
+    height: 3.4px;
+    margin: 3px 0;
+    @include ease-transition(all, 0.5s, ease-in-out);
+  }
+  &:hover::before::after {
+    background-color: $color-accent-1;
+  }
+  // &:hover::before{
+  //   transform: translateY(6.7px) rotate(135deg);
+  //   background-color: $color-accent-1;
+  // }
+  // &:hover::after{
+  //   transform: translateY(-6.7px) rotate(-135deg);
+  //   background-color: $color-accent-1;
+  // }
+  // &:hover .in-d{
+  //   transform: scale(0);
+  //   background-color: $color-accent-1;
+  // }
+}
+
+.open-menu-btn {
+  &::before {
+    transform: translateY(6.7px) rotate(135deg);
+  }
+  &::after {
+    transform: translateY(-6.7px) rotate(-135deg);
+  }
+  .in-d {
+    transform: scale(0);
+  }
+}
+
+.open-menu {
+  clip-path: circle(120% at 100% 0%) !important;
+  //   @each $var in $all_medium_screen {
+  //   @media #{$var} {
+  //     clip-path: circle(100vh at 100% 0%) !important;
+  //   }
+  // }
+}
+
+.active {
+  ::after {
+    content: "";
+    background-color: $color-accent-1;
+    width: 30px;
+    height: 7px;
+    border-radius: 10px;
+    display: block;
+  }
+}
+.active-menu {
+  border-radius: 2px;
+  background-color: $color-primary-2;
+  border-left: 2px solid $color-accent-1;
+  a {
+    color: $color-accent-1;
+  }
+}

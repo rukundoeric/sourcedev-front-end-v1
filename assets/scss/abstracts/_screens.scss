@@ -1,0 +1,14 @@
+$extra_big_screen: "only screen and (min-width: 1200px) and (max-width: 3640px)";
+$big_screen: "only screen and (min-width: 1200px) and (max-width: 1440px)";
+$medium_device: "only screen and (min-width: 992px) and (max-width: 1200px)";
+$tab_device: "only screen and (min-width: 768px) and (max-width: 991px)";
+$large_mobile: "only screen and (min-width: 576px) and (max-width: 767px)";
+$small_mobile: "(max-width: 576px)";
+$sm_mobile: "only screen and (min-width: 421px) and (max-width: 575px)";
+$xs_mobile: "(max-width: 420px)";
+
+$all_big_screen: ($extra_big_screen, $big_screen, $medium_device);
+$all_medium_screen: ($medium_device, $tab_device);
+$only-small-screen: ($large_mobile, $small_mobile);
+$all_small_screen: ($large_mobile, $small_mobile, $sm_mobile, $xs_mobile);
+$all_extra-small_screen: ($sm_mobile, $xs_mobile);

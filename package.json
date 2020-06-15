@@ -1,0 +1,11 @@
+{
+  "name": "sourcedev-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start":"sass --watch assets/scss/main.scss:assets/css/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

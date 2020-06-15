@@ -1,0 +1,123 @@
+.main_menu {
+  // @include show-borders(red, 1px);
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  align-content: center;
+  margin-top: 50px;
+  z-index: 2;
+  @each $var in $all-extra-small-screen {
+    @media #{$var} {
+      margin-top: 0px;
+    }
+  }
+  .row {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    @each $var in $all-extra-small-screen {
+      @media #{$var} {
+        padding: 0 30px 0 30px !important;
+      }
+    }
+
+    .logo {
+      height: 70px;
+      @include flex-center;
+      img {
+        height: 50px;
+        width: 180px;
+        @each $var in $all-small-screen {
+          @media #{$var} {
+            height: 30px;
+            width: 150px;
+          }
+        }
+      }
+    }
+    .menu-btn {
+      @include hide-on($all-big-screen);
+      @include hide-on($all-medium-screen);
+      @include show-on($all-small-screen);
+    }
+    .nav-links {
+      height: 70px;
+      @include flex-center;
+      @include hide-on($all_small_screen);
+      @include ease-transition(display, 0.5s, ease-in-out);
+      ul {
+        width: 500px;
+        display: flex;
+        justify-content: space-evenly;
+        li {
+          @include flex-center;
+          list-style: none;
+        }
+      }
+    }
+
+    a {
+      font-size: 15px;
+      color: $color-white-1;
+      font-weight: 700;
+      opacity: 1;
+      text-decoration: none;
+      cursor: pointer;
+      @include ease-transition(all, 0.3s, ease-in-out);
+      &:hover {
+        transform: scale(1.09);
+        opacity: 1;
+        color: $color-accent-1;
+      }
+    }
+  }
+}
+.nav-menu-lists {
+  position: absolute;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: $color-primary-2;
+  clip-path: circle(0 at 100% 0%);
+  @include ease-transition(all, 0.5s, ease-in-out);
+  z-index: 1;
+
+  .nav-menu-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    @include flex-center;
+    .nav-links-menu {
+      width: 70%;
+      ul {
+        li {
+          @include flex-center;
+          list-style: none;
+          @include ease-transition(background-color, 0.5s, ease-in-out);
+          // @include show-borders(red, 1px);
+          // border-left: 2px solid red;
+          height: 70px;
+          a {
+            font-size: 20px;
+            color: $color-white-1;
+            font-weight: 700;
+            opacity: 1;
+            text-decoration: none;
+            cursor: pointer;
+            @include ease-transition(all, 0.3s, ease-in-out);
+            // &:hover {
+            // }
+          }
+          &:hover {
+            background-color: $color-primary-2;
+            a {
+              transform: scale(1.09);
+              opacity: 1;
+              color: $color-accent-1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

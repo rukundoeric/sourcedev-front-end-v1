@@ -1,0 +1,24 @@
+.banner {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-image: $banner-bg-1;
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+  // @include show-borders(red);
+  // @each $screen in $all_small_screen {
+  //   @media #{$screen} {
+  //     height: 650px;
+  //     background-color: $color_white_2;
+  //   }
+  // }
+
+  .banner-content {
+    height: 100vh;
+    position: relative;
+    //  @include show-borders(green, 5px);
+    overflow: hidden;
+    @extend %banner-bg-gr-1;
+   
+  }
+}
