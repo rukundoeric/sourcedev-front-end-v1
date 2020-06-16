@@ -5,11 +5,16 @@
   background-image: $banner-bg-1;
   background-repeat: no-repeat;
   background-size: 100% 100vh;
+  @each $screen in $all_medium_screen {
+    @media #{$screen} {
+      height: 750px;
+      background-size: 100% 750px;
+    }
+  }
 
   .banner-content {
-    height: 100vh;
+    height: inherit;
     position: relative;
-    //  @include show-borders(green, 5px);
     overflow: hidden;
     @extend %banner-bg-gr-1;
 
@@ -19,13 +24,17 @@
       }
     }
     .banner-text {
+      position: relative;
       display: table;
       width: 100%;
       height: 100%;
 
       .banner-text-iner {
-        display: block;
-        margin-top: 250px;
+        position: relative;
+        padding-top: 100px;
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
 
         @each $screen in $all_medium_screen {
           @media #{$screen} {
@@ -44,15 +53,26 @@
         }
 
         h3 {
+          position: relative;
           font-size: 25px;
-          color: $color_white_1;
-          font-family: Arial, Helvetica, sans-serif;
+          color: $color_white_2;
+          text-transform: uppercase;
+          font-family: s-s-regular;
+          font-weight: 300;
+          letter-spacing: 5px;
+          // top: 50px;
+          // opacity: 0;
           display: flex;
+          // animation: intro1 0.4s forwards linear;
+          @media #{$small_height_screen} {
+            font-size: 15px !important;
+          }
           strong {
             font-size: 25px;
             display: flex;
-            font-family: valken !important;
-            font-weight: 10;
+            font-family: s-s-regular;
+            margin-left: 10px;
+            font-weight: 800;
             color: $color-accent-1;
             @each $screen in $all_extra_small_screen {
               @media #{$screen} {
@@ -69,17 +89,14 @@
                 font-size: 22px;
               }
             }
-            &::before {
-              content: "</";
-              display: flex;
-              margin-left: 5px;
-              font-family: valken !important;
+            @media #{$small_height_screen} {
+              font-size: 15px !important;
             }
+            &::before,
             &::after {
-              content: "/>";
+              content: ".";
               display: flex;
-              margin-left: 5px;
-              font-family: valken !important;
+              font-family: dosis !important;
             }
           }
           @each $screen in $all_medium_screen {
@@ -99,11 +116,22 @@
           }
         }
         h1 {
+          position: relative;
           font-size: 85px;
-          font-family: dosis;
+          font-family: Lato,sans-serif;
           margin-top: 30px;
           min-width: 50%;
-          color: $color-white-1;
+          // opacity: 0;
+          // transform: rotateX(0) scale(0.2);
+          // @include custom-animate(
+          //   intro2,
+          //   1s,
+          //   ease-in-out,
+          //   0.4s,
+          //   forwards,
+          //   alternate
+          // );
+          color: $color-white-2;
           @each $screen in $all_medium_screen {
             @media #{$screen} {
               font-size: 60px;
@@ -119,12 +147,28 @@
               font-size: 45px;
             }
           }
+          @media #{$small_height_screen} {
+            font-size: 30px !important;
+          }
         }
 
         a {
           margin-top: 70px;
-          font-size: 25px;
+          font-size: 20px;
           text-decoration: none !important;
+          border-radius: 2px !important;
+          font-size: 24px !important;
+          padding: 10px 35px !important;
+          opacity: 1;
+          transition: all 0.5s ease-in-out !important;
+          // @include custom-animate(
+          //   btn-anim-1,
+          //   2s,
+          //   ease-in-out,
+          //   1s,
+          //   forwards,
+          //   alternate
+          // );
           @each $screen in $all_medium_screen {
             @media #{$screen} {
               font-size: 20px;
@@ -135,38 +179,41 @@
               font-size: 18px;
             }
           }
+          // &:hover {
+          //   transform: scale(2);
+          //   color: red !important;
+          // }
         }
       }
     }
   }
 
-  .anim-1{
+  .anim-1 {
     position: absolute;
     left: 85%;
     top: 1%;
     width: 200px;
     height: 200px;
   }
-  .anim-2{
+  .anim-2 {
     position: absolute;
     left: 2%;
     top: 5%;
     width: 200px;
     height: 200px;
   }
-  .anim-3{
+  .anim-3 {
     position: absolute;
     left: 75%;
     top: 13%;
     width: 150px;
     height: 150px;
   }
-  .anim-4{
+  .anim-4 {
     position: absolute;
     left: 0%;
     top: 23%;
     width: 150px;
     height: 150px;
   }
-
 }

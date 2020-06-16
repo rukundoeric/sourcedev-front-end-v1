@@ -106,16 +106,18 @@
             text-decoration: none;
             cursor: pointer;
             @include ease-transition(all, 0.3s, ease-in-out);
-            // &:hover {
-            // }
           }
           &:hover {
-            background-color: $color-primary-2;
             a {
               transform: scale(1.09);
               opacity: 1;
               color: $color-accent-1;
             }
+          }
+          .btn-1 {
+            font-size: 20px !important;
+            border-radius: 2px;
+            padding: 12px 20px;
           }
         }
       }

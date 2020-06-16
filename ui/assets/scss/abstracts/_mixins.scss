@@ -48,3 +48,25 @@
   -o-transition: all 8s ease 4s;
   user-select: none;
 }
+@mixin custom-animate1(
+  $name,
+  $duration,
+  $timing-function,
+  $delay,
+  $iteration-count,
+  $direction
+) {
+  backface-visibility: hidden;
+  animation: $name $duration $timing-function $delay $iteration-count $direction;
+  -o-animation: $name $duration $timing-function $delay $iteration-count
+    $direction;
+  -webkit-animation: $name $duration $timing-function $delay $iteration-count
+    $direction;
+  -moz-transition: $name $duration $timing-function $delay $iteration-count
+    $direction;
+  transition: all 8s ease 4s;
+  -moz-transition: all 8s ease 4s;
+  -webkit-transition: all 8s ease 4s;
+  -o-transition: all 8s ease 4s;
+  user-select: none;
+}
