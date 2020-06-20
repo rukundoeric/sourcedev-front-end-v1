@@ -70,3 +70,10 @@
   -o-transition: all 8s ease 4s;
   user-select: none;
 }
+
+@mixin transform_time($total_time) {
+  -webkit-transition: $total_time;
+  -moz-transition: $total_time;
+  -o-transition: $total_time;
+  transition: $total_time;
+}

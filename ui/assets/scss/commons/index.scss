@@ -1,4 +1,5 @@
 @import "./button";
+@import "./grids";
 
 body,
 html {
@@ -12,6 +13,19 @@ textarea {
 }
 a {
   text-decoration: none;
+  @include transform_time(0.5s);
+}
+h3,
+h4,
+h5,
+p {
+  font-family: roboto-medium;
+}
+
+p {
+  font-family: roboto-medium;
+  font-weight: 100;
+  opacity: 0.7;
 }
 ul,
 li {
@@ -78,7 +92,7 @@ ul {
 }
 
 .open-menu {
-  clip-path: circle(120% at 100% 0%) !important;
+  clip-path: circle(150% at 100% 0%) !important;
   //   @each $var in $all_medium_screen {
   //   @media #{$var} {
   //     clip-path: circle(100vh at 100% 0%) !important;
@@ -103,4 +117,29 @@ ul {
   a {
     color: $color-accent-1;
   }
+}
+
+// Font Icons style
+[class^="ti-"],
+[class*=" ti-"] {
+  font-family: "themify";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+  font-family: Flaticon;
+  font-size: 35px;
+  font-style: normal;
+  color: #fff;
 }

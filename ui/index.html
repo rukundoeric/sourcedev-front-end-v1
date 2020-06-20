@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="theme-color" content="#021422"/>
+    <meta name="theme-color" content="#021422" />
     <title>SourceDev</title>
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
     <link
@@ -14,6 +14,15 @@
       href="./assets/css/bootstrap.min.css"
       type="text/css"
     />
+    <link
+      rel="stylesheet"
+      href="./assets/libs/aos-master/aos-master/dist/aos.css"
+      type="text/css"
+    />
+    <script src="./assets/libs/gsap-public/minified/gsap.min.js"></script>
+    <script src="./assets/libs/aos-master/aos-master/dist/aos.js"></script>
+    <script src="./assets/libs/ScrollMagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+    <script src="./assets/libs/ScrollMagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
   </head>
   <body>
     <header class="main_menu">
@@ -84,26 +93,133 @@
           <div class="banner-text-iner">
             <h3>We are <strong> SourceDev </strong></h3>
             <h1>
-              Solution for Web & Mobile Software Development
+              Solution for Web & Mobile Software Application Development
             </h1>
-            <a href="#" class="btn-1">Talk To Us</a> </a>
+            <a href="#" class="btn-1">Talk To Us</a>
           </div>
         </div>
       </div>
       <div class="anim-1 jump-animimation-1">
-        <img src="./assets/imgs/anim/anim-d-1.svg"/>
+        <img src="./assets/imgs/anim/anim-d-1.svg" />
       </div>
       <div class="anim-2 jump-animimation-2">
-        <img src="./assets/imgs/anim/anim-d-2.svg"/>
+        <img src="./assets/imgs/anim/anim-d-2.svg" />
       </div>
       <div class="anim-3 jump-animimation-3">
-        <img src="./assets/imgs/anim/anim-d-3.svg"/>
+        <img src="./assets/imgs/anim/anim-d-3.svg" />
       </div>
       <div class="anim-4 jump-animimation-4">
-        <img src="./assets/imgs/anim/anim-d-4.svg"/>
+        <img src="./assets/imgs/anim/anim-d-4.svg" />
       </div>
+    </section>
+    <section class="short-intro">
+      <div class="container stick">
+        <div class="row">
+          <div class="col-xl-6 col-md-6 col-sm-12">
+            <h3 id="d-intro-txt">
+              We are here to help you bring your product to life
+              <span id="d-intro-txt-under-line" />
+            </h3>
+          </div>
+          <div class="col-xl-6 col-md-6 col-sm-12">
+            <div id="d-intro-web" class="s-intro s-intro-web-mob">
+              <div class="s-intro-web-mob-inner">
+                <span><i class="ti-info"></i></span>
+                <h3>Front-End</h3>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Possimus, dolor quaerat aliquam numquam veniam nesciunt,
+                </p>
+                <a class="btn-1" href="#">Talk To Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-6 col-md-6 col-sm-12">
+            <div id="d-intro-mobile" class="s-intro s-intro-api">
+              <div class="s-intro-api-inner">
+                <span><i class="ti-info"></i></span>
+                <h3>Back-End</h3>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Possimus, dolor quaerat aliquam numquam veniam nesciunt,
+                </p>
+                <a class="btn-1" href="#">Talk To Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="box" class="sqr" />
+      </div>
+    </section>
 
+    <section class="service-part">
+      <div class="container">
+        <div class="x-flex service-content">
+          <div class="col-xl-4 col-md-12 col-sm-12 col-xs-12 x-card">
+            <h1
+              data-aos="fade-right"
+              data-aos-offset="200"
+              data-aos-easing="ease-in-sine"
+            >
+              Meet our best services
+            </h1>
+            <h3
+              data-aos="fade-up"
+              data-aos-offset="200"
+              data-aos-easing="ease-in-sine"
+            >
+              We can help you bring your product to life - whether it's a
+              Minimum Viable Product(MVP), UX/UI Services or API integration.
+            </h3>
+          </div>
+          <div
+            class="col-xl-4 col-md-6 col-sm-12 col-xs-12 x-card"
+            data-aos="zoom-in"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine"
+          >
+            <div class="x-card-content">
+              <span class="single_service_icon"
+                ><i class="flaticon-coding"></i
+              ></span>
+              <h3>Web Application Development Service</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                eum placeat temporibus debitis...
+              </p>
+              <a href="#" class="btn_3"
+                >Learn More <i class="ti-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div
+            class="col-xl-4 col-md-6 col-sm-12 col-xs-12 x-card"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine"
+          >
+            <div class="x-card-content">
+              <span class="single_service_icon"
+                ><i class="flaticon-app-development style_icon"></i
+              ></span>
+              <h3>Mobile Application Development Service</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                eum placeat temporibus debitis...
+              </p>
+              <a href="#" class="btn_3"
+                >Learn More <i class="ti-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <script src="./assets/js/index.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
